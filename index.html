@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
+</head>
+<body>
+<header class="container">
+    <nav class="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <nav class="nav-mb" id="menu">
+        <button id="close-btn"><img src="./assets/p112.jpg" alt="Close"></button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero container" id="home">
+        <div class="hero-top">
+            <div class="name-row">
+                <h1>Denis<br>Novik</h1>
+                <button id="burger"><img src="./assets/p111.jpg" alt="Menu"></button>
+            </div>
+            <p>UX | UI designer<br>24 years old, Minsk</p>
+        </div>
+        <img src="./assets/BSPP2266.png" alt="Фото">
+    </section>
+
+    <section class="about" id="about">
+        <h2>About me</h2>
+        <p>Hi, I'm Denis, UX/UI designer.</p>
+    </section>
+
+    <section class="skills" id="skills">
+    <div class="container">
+        <h2>Skills</h2>
+        <p>I work in such programs as</p>
+
+        <ul class="skills-list">
+            <li class="skill">
+                <img src="./assets/Group 6.png" alt="Adobe Photoshop">
+                <span class="skill-name">Adobe Photoshop</span>
+                <div class="stars">★★★★<span class="off">★</span></div>
+            </li>
+            <li class="skill">
+                <img src="./assets/Group 7.png" alt="Adobe Illustrator">
+                <span class="skill-name">Adobe Illustrator</span>
+                <div class="stars">★★★<span class="off">★★</span></div>
+            </li>
+            <li class="skill">
+                <img src="./assets/Group 67.png" alt="Adobe After Effects">
+                <span class="skill-name">Adobe After Effects</span>
+                <div class="stars">★★★★<span class="off">★</span></div>
+            </li>
+            <li class="skill">
+                <img src="./assets/Group 95.png" alt="Figma">
+                <span class="skill-name">Figma</span>
+                <div class="stars">★★★★<span class="off">★</span></div>
+            </li>
+        </ul>
+    </div>
+<div class="socials">
+    <a href="#"><img src="./assets/Group 2.png" alt="LinkedIn"></a>
+    <a href="#"><img src="./assets/Group 8.png" alt="Instagram"></a>
+    <a href="#"><img src="./assets/Group 9.png" alt="Behance"></a>
+    <a href="#"><img src="./assets/Group 10.png" alt="Dribbble"></a>
+    
+</div>
+</section>
+</main>
+<script>
+    const menu = document.getElementById('menu');
+    document.getElementById('burger').onclick = () => menu.classList.add('open');
+    document.getElementById('close-btn').onclick = () => menu.classList.remove('open');
+    menu.querySelectorAll('a').forEach(a => a.onclick = () => menu.classList.remove('open'));
+</script>
+</body>
+</html>
